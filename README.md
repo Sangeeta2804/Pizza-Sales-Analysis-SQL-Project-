@@ -47,15 +47,18 @@ Peak sales occur during evening hours
 Weekends generate higher revenue compared to weekdays
 
  # Query Examples:
-``` 
- -- Total Revenue
+ sql ``` 
+-- Total Revenue
 SELECT SUM(total_price) AS total_revenue
 FROM order_details;
 
 -- Top 5 Best Selling Pizzas
-SELECT pizza_name, SUM(quantity) AS total_sold
+SELECT 
+    pizza_name, 
+    SUM(quantity) AS total_sold
 FROM order_details od
-JOIN pizzas p ON od.pizza_id = p.pizza_id
+JOIN pizzas p 
+    ON od.pizza_id = p.pizza_id
 GROUP BY pizza_name
 ORDER BY total_sold DESC
 LIMIT 5;
