@@ -47,7 +47,7 @@ Peak sales occur during evening hours
 Weekends generate higher revenue compared to weekdays
 
  # Query Examples:
-
+``` 
  -- Total Revenue
 SELECT SUM(total_price) AS total_revenue
 FROM order_details;
