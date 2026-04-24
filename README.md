@@ -66,7 +66,7 @@ CAST(AS DECIMAL) for precise financial reporting
 5. Query the views for instant reporting:
 
 
-sql```
+``` sql
 
 SELECT * FROM vw_MonthlySales    ORDER BY month_number;
 SELECT * FROM vw_SalesByCategory ORDER BY category_revenue DESC;
