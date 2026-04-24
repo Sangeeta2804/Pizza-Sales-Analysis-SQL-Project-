@@ -1,21 +1,21 @@
-# Pizza Sales Data Analysis — SQL
+## Pizza Sales Data Analysis — SQL
 
 An end-to-end SQL data pipeline built on Microsoft SQL Server (T-SQL) — covering data cleaning, transformation, and business analytics on a real-world pizza sales dataset. The project follows a structured layered architecture: Raw → Cleaned → Reporting Views.
 
-# Project Objective
+## Project Objective
 To transform raw, uncleaned pizza sales data into actionable business insights by building a reliable SQL pipeline that handles data quality, standardization, and KPI reporting — all without any external tools.
 
-# Project Structure
+## Project Structure
 
 pizza-sales-sql/
 │
 ├── pizza_sales_analysis.sql   # Complete SQL script (all phases)
 └── README.md                  # Project documentation
 
-# Pipeline Overview
+## Pipeline Overview
 pizza_sales_raw  →  [Cleaning & Transformation]  →  pizza_sales_cleaned  →  Reporting Views
 
- # Data Cleaning Steps
+ ## Data Cleaning Steps
 
 Detected and handled NULL values in critical columns (order_date, pizza_name, quantity)
 Imputed defaults for missing fields (quantity = 1, pizza_category = 'Unknown')
@@ -24,24 +24,24 @@ Fixed invalid data — negative/zero quantities and prices replaced with safe de
 Standardized pizza_size values to UPPERCASE for consistency
 
 
-# Business KPIs Analyzed
+## Business KPIs Analyzed
 
-### KPISQL - Technique Used
+#### KPISQL - Technique Used
 Total Revenue - SUM(), CAST(AS DECIMAL)
 Top 5 Best-Selling Pizzas - TOP 5, GROUP BY, ORDER BY
 Revenue by Pizza - CategoryGROUP BY, SUM()
 Monthly Sales - TrendMONTH(), DATENAME(), GROUP BY
 
-# Reporting Views Created
+## Reporting Views Created
 
-### View Name - Purpose
+#### View Name - Purpose
 vw_TotalRevenue  - Aggregated total revenue across all 
 ordersvw_TopSellingPizzas  -  Top 5 pizzas ranked by units sold
 vw_SalesByCategory  -  Revenue breakdown by pizza category
 vw_MonthlySales  -  Month-wise revenue trend for time-series analysis
 
-# Tech Stack
-### Tool  -  Usage
+## Tech Stack
+###$ Tool  -  Usage
 Microsoft SQL Server  -  Database engine
 T-SQL  -  Querying, cleaning, transformation
 SQL ViewsReusable reporting layer  -  
